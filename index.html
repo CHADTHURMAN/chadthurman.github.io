@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chad Thurman | Director of Photography & Ocean Cinematographer | Oahu, Hawaii</title>
+  <meta name="description" content="Commercial, ocean, and narrative Director of Photography based on the North Shore of Oahu, Hawaii. Specializing in water cinematography, dynamic movement, and island production logistics." />
+
+  <!-- Google Fonts: Clean Cinematic Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090a0c;
+      --surface: #121418;
+      --border: #22262e;
+      --text: #e6e8eb;
+      --muted: #8b929e;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Cinzel', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+    }
+
+    body {
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(9, 10, 12, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-left: 1.5rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .cta-nav {
+      color: var(--accent) !important;
+      border: 1px solid var(--accent);
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .cta-nav:hover {
+      background: var(--accent-glow);
+    }
+
+    /* Container Standard */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto 2rem;
+      font-weight: 300;
+    }
+
+    /* Showreel Frame */
+    .reel-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Section Typography */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    /* Specialty Pillars */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #384252;
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Production Gear List */
+    .gear-section {
+      background: #0d0f12;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .gear-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .gear-col h4 {
+      color: #fff;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .gear-col ul {
+      list-style: none;
+    }
+
+    .gear-col li {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* About Section */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .about-split {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    /* Contact / Booking */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      background: #090a0c;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.8rem 1rem;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    button.btn-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #090a0c;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: opacity 0.2s ease;
+    }
+
+    button.btn-submit:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Chad Thurman<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#work">Specialties</a>
+        <a href="#gear">Capabilities</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta-nav">Check Availability</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero">
+    <span class="eyebrow">Director of Photography • Oahu, Hawaii</span>
+    <h1>Visuals Defined by the Elements.</h1>
+    <p class="hero-lead">
+      Specialized in water cinematography, commercial brand lifestyle, and narrative movement. Based on the North Shore of Oahu for local and visiting productions.
+    </p>
+  </section>
+
+  <!-- Master Showreel Embed -->
+  <section class="reel-wrapper" id="reel">
+    <div class="video-container">
+      <!-- Embedded with standard privacy parameters and clean controls -->
+      <iframe 
+        src="https://www.youtube-nocookie.com/embed/3i1rzfnNKdI?rel=0&modestbranding=1" 
+        title="Chad Thurman Cinematography Showreel" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Capabilities & Pillars -->
+  <section class="container" id="work">
+    <h2 class="section-title">Production Disciplines</h2>
+    <p class="section-sub">Tailored cinematography for remote commercial sets, breaking ocean surf, and dynamic environments.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🌊</div>
+        <h3>Water & Ocean Cinematography</h3>
+        <p>
+          Deep familiarity with North Shore wave mechanics, high-impact surf angles, open-ocean tracking, and underwater marine environments. Ready with specialized water housings and stabilized action rigs.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎬</div>
+        <h3>Commercial & Brand Lifestyle</h3>
+        <p>
+          Authentic visual storytelling for athletic, beverage, hospitality, and outdoor apparel brands. Clean compositions, golden-hour natural light management, and high-energy pacing.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎥</div>
+        <h3>Narrative & 2nd Unit DP</h3>
+        <p>
+          Collaborative on-set leadership for visiting feature and commercial productions. Local island scouting, production logistics awareness, and seamless matching with primary unit camera packages.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Production Gear & Logistics -->
+  <section class="gear-section" id="gear">
+    <div class="container">
+      <h2 class="section-title">Field Capabilities & Kit</h2>
+      <p class="section-sub">Production-ready configurations available for immediate deployment across the Hawaiian Islands.</p>
+
+      <div class="gear-grid">
+        <div class="gear-col">
+          <h4>Camera Packages</h4>
+          <ul>
+            <li>Cinema & Hybrid Bodies</li>
+            <li>Compact Cinema Rigs</li>
+            <li>High-Speed 4K Slow Motion</li>
+            <li>ProRes & Log Workflows</li>
+          </ul>
+        </div>
+        <div class="gear-col">
+          <h4>Water & Movement</h4>
+          <ul>
+            <li>Underwater Housings</li>
+            <li>4-Axis Gimbal Stabilization</li>
+            <li>Dynamic Action Rigs</li>
+            <li>Mobile Transport Vehicle</li>
+          </ul>
+        </div>
+        <div class="gear-col">
+          <h4>Monitoring & Post</h4>
+          <ul>
+            <li>Wireless Video Monitoring</li>
+            <li>Field Audio Capture Rigs</li>
+            <li>Final Cut Pro X Editorial</li>
+            <li>On-Set DIT / Data Redundancy</li>
+          </ul>
+        </div>
+        <div class="gear-col">
+          <h4>Logistics</h4>
+          <ul>
+            <li>North Shore Oahu Based</li>
+            <li>Inter-Island Travel Ready</li>
+            <li>Ocean Water Safety Proficient</li>
+            <li>Permit & Location Guidance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="container" id="about">
+    <div class="about-split">
+      <div>
+        <h2 class="section-title">About Chad Thurman</h2>
+        <p class="section-sub" style="margin-bottom: 1.5rem;">Director of Photography / Waterman</p>
+        <div class="about-text">
+          <p>
+            Operating out of the North Shore of Oahu, I combine technical camera precision with a lifetime of ocean experience. My focus is capturing unscripted energy, raw athleticism, and atmospheric lighting across terrestrial and aquatic environments.
+          </p>
+          <p>
+            Whether serving as the primary Director of Photography on a commercial campaign or operating as a specialized Water DP for a visiting mainland unit, I prioritize set efficiency, safety in high-stress ocean conditions, and delivering footage built to edit smoothly.
+          </p>
+        </div>
+      </div>
+      <div class="card" style="background: #0e1115; border-color: #2b303b;">
+        <h3 style="margin-bottom: 1rem;">Production Inquiries</h3>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">
+          Available for commercial shoots, editorial assignments, narrative water units, and travel productions worldwide.
+        </p>
+        <p style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem;">
+          📍 <strong>Location:</strong> North Shore, Oahu, HI
+        </p>
+        <p style="color: #fff; font-size: 0.95rem;">
+          ✈️ <strong>Travel:</strong> Available inter-island & international
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container" id="contact">
+    <div class="contact-card">
+      <h2 class="section-title" style="text-align: center;">Production Inquiry</h2>
+      <p class="section-sub" style="text-align: center; margin-bottom: 2rem;">
+        Inquire about DP availability, day rates, water unit booking, or kit rentals.
+      </p>
+
+      <!-- Standard Formspree/Mailto endpoint -->
+      <form action="mailto:chad@chadthurman.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Name / Company</label>
+          <input type="text" id="name" name="name" required placeholder="Production Co. or Agency" />
+        </div>
+
+        <div class="form-group">
+          <label for="dates">Dates & Location</label>
+          <input type="text" id="dates" name="dates" placeholder="e.g. October 15-18 | Oahu" />
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role Needed</label>
+          <select id="role" name="role">
+            <option value="Director of Photography">Director of Photography (A-Cam)</option>
+            <option value="Water DP">Water DP / Ocean Cinematographer</option>
+            <option value="Camera Operator">Camera Operator / 2nd Unit</option>
+            <option value="Full Production Package">Full Commercial Production Package</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Project Details</label>
+          <textarea id="details" name="details" rows="4" placeholder="Brief project scope, crew requirements, deliverable expectations..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Chad Thurman. Director of Photography. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
